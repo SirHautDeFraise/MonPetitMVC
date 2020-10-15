@@ -1,13 +1,15 @@
 <?php
 
-class Connexion
-{
+namespace Tools;
+
+use PDO;
+
+class Connexion {
 
   private static $connexion = null;
   private static $connexionInstance = null;
 
-  private function __construct()
-  {
+  private function __construct() {
     try {
       $connect_str = CNSTRING;
       $connect_user = DATABASE_USER;
@@ -19,8 +21,7 @@ class Connexion
     }
   }
 
-  public static function getConnexion()
-  {
+  public static function getConnexion() {
 
     if (is_null(self::$connexionInstance)) {
       self::$connexionInstance = new Connexion();
@@ -28,4 +29,5 @@ class Connexion
 
     return self::$connexion;
   }
+
 }

@@ -1,11 +1,17 @@
 {
-    "name": "vendor/mon-petit-m-v-c",
-    "description": "Description of project MonPetitMVC.",
-    "authors": [
-        {
-            "name": "Thibault",
-            "email": "laudethibault_pro@outlook.fr"
-        }
-    ],
-    "require": {}
+  "name": "vendor/mon-petit-m-v-c",
+  "description": "Description of project MonPetitMVC.",
+  "authors": [
+    {
+      "name": "Thibault",
+      "email": "laudethibault_pro@outlook.fr"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "APP\\": "src",
+      "Tools\\": "includes"
+    }
+  }
 }

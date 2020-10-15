@@ -1,4 +1,5 @@
 <?php
+
 define('DS', DIRECTORY_SEPARATOR);
 define('RACINE', new DirectoryIterator(dirname(__FILE__)) . DS . ".." . DS);
 include_once(RACINE . DS . 'config/conf.php');
@@ -21,4 +22,3 @@ try {
   //$params= array(...)
   //include PATH_VIEW . '$BaseController'errors/ . 'View' . DS . 'unClient.php';
 }
-

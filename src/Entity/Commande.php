@@ -3,52 +3,54 @@
 namespace APP\Entity;
 
 class Commande {
-    private $id;
-    private $idClient;
-    private $dateCde;
-    private $noFacture;
 
-    public function __construct($params = null) {
-        if (!is_null($params)) {
-            foreach ($params as $cle => $valeur) {
-                if(strlen($valeur)>0){
-                $this->$cle = $valeur;
-                } else{
-                     $this->$cle = null;
-                }
-            }
+  private $id;
+  private $idClient;
+  private $dateCde;
+  private $noFacture;
+
+  public function __construct($params = null) {
+    if (!is_null($params)) {
+      foreach ($params as $cle => $valeur) {
+        if (strlen($valeur) > 0) {
+          $this->$cle = $valeur;
+        } else {
+          $this->$cle = null;
         }
+      }
     }
-    
-    public function getId() {
-        return $this->id;
-    }
+  }
 
-    public function getIdClient() {
-        return $this->idClient;
-    }
+  public function getId() {
+    return $this->id;
+  }
 
-    public function getDateCde() {
-        return $this->dateCde;
-    }
+  public function getIdClient() {
+    return $this->idClient;
+  }
 
-    public function getNoFacture() {
-        return $this->noFacture;
-    }
+  public function getDateCde() {
+    return $this->dateCde;
+  }
 
-    public function setId($id) {
-        $this->id = $id;
-    }
+  public function getNoFacture() {
+    return $this->noFacture;
+  }
 
-    public function setIdClient($idClient) {
-        $this->idClient = $idClient;
-    }
+  public function setId($id) {
+    $this->id = $id;
+  }
 
-    public function setDateCde($dateCde) {
-        $this->dateCde = $dateCde;
-    }
+  public function setIdClient($idClient) {
+    $this->idClient = $idClient;
+  }
 
-    public function setNoFacture($noFacture) {
-        $this->noFacture = $noFacture;
-    }
+  public function setDateCde($dateCde) {
+    $this->dateCde = $dateCde;
+  }
+
+  public function setNoFacture($noFacture) {
+    $this->noFacture = $noFacture;
+  }
+
 }
